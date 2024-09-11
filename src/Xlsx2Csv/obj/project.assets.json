@@ -1,0 +1,389 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "CommandLineParser/2.9.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/CommandLine.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CommandLine.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.NET.ILLink.Tasks/8.0.6": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Sylvan.Data.Csv/1.3.9": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Sylvan.Data.Csv.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sylvan.Data.Csv.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sylvan.Data.Excel/0.4.25": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Sylvan.Data.Excel.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sylvan.Data.Excel.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Text.Encoding.CodePages/9.0.0-rc.1.24431.7": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.Text.Encoding.CodePages.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.Text.Encoding.CodePages.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      }
+    },
+    "net8.0/win-x64": {
+      "CommandLineParser/2.9.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/CommandLine.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CommandLine.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.NET.ILLink.Tasks/8.0.6": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.NET.ILLink.Tasks.props": {}
+        }
+      },
+      "Sylvan.Data.Csv/1.3.9": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Sylvan.Data.Csv.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sylvan.Data.Csv.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Sylvan.Data.Excel/0.4.25": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Sylvan.Data.Excel.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Sylvan.Data.Excel.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "System.Text.Encoding.CodePages/9.0.0-rc.1.24431.7": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.Text.Encoding.CodePages.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CommandLineParser/2.9.1": {
+      "sha512": "OE0sl1/sQ37bjVsPKKtwQlWDgqaxWgtme3xZz7JssWUzg5JpMIyHgCTY9MVMxOg48fJ1AgGT3tgdH5m/kQ5xhA==",
+      "type": "package",
+      "path": "commandlineparser/2.9.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CommandLine20.png",
+        "License.md",
+        "README.md",
+        "commandlineparser.2.9.1.nupkg.sha512",
+        "commandlineparser.nuspec",
+        "lib/net40/CommandLine.dll",
+        "lib/net40/CommandLine.xml",
+        "lib/net45/CommandLine.dll",
+        "lib/net45/CommandLine.xml",
+        "lib/net461/CommandLine.dll",
+        "lib/net461/CommandLine.xml",
+        "lib/netstandard2.0/CommandLine.dll",
+        "lib/netstandard2.0/CommandLine.xml"
+      ]
+    },
+    "Microsoft.NET.ILLink.Tasks/8.0.6": {
+      "sha512": "E+lDylsTeP4ZiDmnEkiJ5wobnGaIJzFhOgZppznJCb69UZgbh6G3cfv1pnLDLLBx6JAgl0kAlnINDeT3uCuczQ==",
+      "type": "package",
+      "path": "microsoft.net.illink.tasks/8.0.6",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "Sdk/Sdk.props",
+        "THIRD-PARTY-NOTICES.TXT",
+        "analyzers/dotnet/cs/ILLink.CodeFixProvider.dll",
+        "analyzers/dotnet/cs/ILLink.RoslynAnalyzer.dll",
+        "build/Microsoft.NET.ILLink.Analyzers.props",
+        "build/Microsoft.NET.ILLink.Tasks.props",
+        "build/Microsoft.NET.ILLink.targets",
+        "microsoft.net.illink.tasks.8.0.6.nupkg.sha512",
+        "microsoft.net.illink.tasks.nuspec",
+        "tools/net472/ILLink.Tasks.dll",
+        "tools/net472/ILLink.Tasks.dll.config",
+        "tools/net472/Mono.Cecil.Mdb.dll",
+        "tools/net472/Mono.Cecil.Pdb.dll",
+        "tools/net472/Mono.Cecil.Rocks.dll",
+        "tools/net472/Mono.Cecil.dll",
+        "tools/net472/Sdk/Sdk.props",
+        "tools/net472/System.Buffers.dll",
+        "tools/net472/System.Collections.Immutable.dll",
+        "tools/net472/System.Memory.dll",
+        "tools/net472/System.Numerics.Vectors.dll",
+        "tools/net472/System.Reflection.Metadata.dll",
+        "tools/net472/System.Runtime.CompilerServices.Unsafe.dll",
+        "tools/net472/build/Microsoft.NET.ILLink.Analyzers.props",
+        "tools/net472/build/Microsoft.NET.ILLink.Tasks.props",
+        "tools/net472/build/Microsoft.NET.ILLink.targets",
+        "tools/net8.0/ILLink.Tasks.deps.json",
+        "tools/net8.0/ILLink.Tasks.dll",
+        "tools/net8.0/Mono.Cecil.Mdb.dll",
+        "tools/net8.0/Mono.Cecil.Pdb.dll",
+        "tools/net8.0/Mono.Cecil.Rocks.dll",
+        "tools/net8.0/Mono.Cecil.dll",
+        "tools/net8.0/Sdk/Sdk.props",
+        "tools/net8.0/build/Microsoft.NET.ILLink.Analyzers.props",
+        "tools/net8.0/build/Microsoft.NET.ILLink.Tasks.props",
+        "tools/net8.0/build/Microsoft.NET.ILLink.targets",
+        "tools/net8.0/illink.deps.json",
+        "tools/net8.0/illink.dll",
+        "tools/net8.0/illink.runtimeconfig.json",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Sylvan.Data.Csv/1.3.9": {
+      "sha512": "ej6VghLaUn5/GK6jGFvd5aHn3Wue+Yp2tpmyI507PBRb/lFA6WAPS+3yKGr5wtFzh0zaE53CnCxhjc0ZW8xu3g==",
+      "type": "package",
+      "path": "sylvan.data.csv/1.3.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Sylvan.png",
+        "lib/net6.0/Sylvan.Data.Csv.dll",
+        "lib/net6.0/Sylvan.Data.Csv.xml",
+        "lib/netstandard2.0/Sylvan.Data.Csv.dll",
+        "lib/netstandard2.0/Sylvan.Data.Csv.xml",
+        "lib/netstandard2.1/Sylvan.Data.Csv.dll",
+        "lib/netstandard2.1/Sylvan.Data.Csv.xml",
+        "license.txt",
+        "readme.md",
+        "sylvan.data.csv.1.3.9.nupkg.sha512",
+        "sylvan.data.csv.nuspec"
+      ]
+    },
+    "Sylvan.Data.Excel/0.4.25": {
+      "sha512": "JLvJf4F2lYNfn/1YvoATYm/NwFvekld5vgNHcCS/kQPQqZZw7Q/DwodFBnE9GfD8lpCFMP+QFEcGN5W7qITLBg==",
+      "type": "package",
+      "path": "sylvan.data.excel/0.4.25",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Sylvan.png",
+        "lib/net6.0/Sylvan.Data.Excel.dll",
+        "lib/net6.0/Sylvan.Data.Excel.xml",
+        "lib/netstandard2.0/Sylvan.Data.Excel.dll",
+        "lib/netstandard2.0/Sylvan.Data.Excel.xml",
+        "lib/netstandard2.1/Sylvan.Data.Excel.dll",
+        "lib/netstandard2.1/Sylvan.Data.Excel.xml",
+        "license.txt",
+        "readme.md",
+        "sylvan.data.excel.0.4.25.nupkg.sha512",
+        "sylvan.data.excel.nuspec"
+      ]
+    },
+    "System.Text.Encoding.CodePages/9.0.0-rc.1.24431.7": {
+      "sha512": "RRwyNcn8Ph+P3gPGouH+6x1N8l9tc5h3+54zUt6Bhet1AcjypZ51mNMYmPTOz056rxCNoPUNAyDCkk9AsAnUTw==",
+      "type": "package",
+      "path": "system.text.encoding.codepages/9.0.0-rc.1.24431.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Text.Encoding.CodePages.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Text.Encoding.CodePages.targets",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net462/System.Text.Encoding.CodePages.dll",
+        "lib/net462/System.Text.Encoding.CodePages.xml",
+        "lib/net8.0/System.Text.Encoding.CodePages.dll",
+        "lib/net8.0/System.Text.Encoding.CodePages.xml",
+        "lib/net9.0/System.Text.Encoding.CodePages.dll",
+        "lib/net9.0/System.Text.Encoding.CodePages.xml",
+        "lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
+        "lib/netstandard2.0/System.Text.Encoding.CodePages.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/net8.0/System.Text.Encoding.CodePages.xml",
+        "runtimes/win/lib/net9.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/net9.0/System.Text.Encoding.CodePages.xml",
+        "system.text.encoding.codepages.9.0.0-rc.1.24431.7.nupkg.sha512",
+        "system.text.encoding.codepages.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "CommandLineParser >= 2.9.1",
+      "Microsoft.NET.ILLink.Tasks >= 8.0.6",
+      "Sylvan.Data.Csv >= 1.3.9",
+      "Sylvan.Data.Excel >= 0.4.25",
+      "System.Text.Encoding.CodePages >= 9.0.0-rc.1.24431.7"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\wbn\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "E:\\Git\\Xlsx2Csv\\Xlsx2Csv\\Xlsx2Csv.csproj",
+      "projectName": "Xlsx2Csv",
+      "projectPath": "E:\\Git\\Xlsx2Csv\\Xlsx2Csv\\Xlsx2Csv.csproj",
+      "packagesPath": "C:\\Users\\wbn\\.nuget\\packages\\",
+      "outputPath": "E:\\Git\\Xlsx2Csv\\Xlsx2Csv\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\wbn\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "dependencies": {
+          "CommandLineParser": {
+            "target": "Package",
+            "version": "[2.9.1, )"
+          },
+          "Microsoft.NET.ILLink.Tasks": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[8.0.6, )",
+            "autoReferenced": true
+          },
+          "Sylvan.Data.Csv": {
+            "target": "Package",
+            "version": "[1.3.9, )"
+          },
+          "Sylvan.Data.Excel": {
+            "target": "Package",
+            "version": "[0.4.25, )"
+          },
+          "System.Text.Encoding.CodePages": {
+            "target": "Package",
+            "version": "[9.0.0-rc.1.24431.7, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "win-x64": {
+        "#import": []
+      }
+    }
+  }
+}
