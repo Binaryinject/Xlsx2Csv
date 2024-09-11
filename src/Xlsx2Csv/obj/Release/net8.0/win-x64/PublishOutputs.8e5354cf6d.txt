@@ -1,2 +1,0 @@
-E:\Git\Xlsx2Csv\Xlsx2Csv\bin\Release\net8.0\win-x64\publish\Xlsx2Csv.pdb
-E:\Git\Xlsx2Csv\Xlsx2Csv\bin\Release\net8.0\win-x64\publish\Xlsx2Csv.exe
