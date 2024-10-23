@@ -17,7 +17,8 @@ public partial class XlsxUtility
     {
         long startTime = Stopwatch.GetTimestamp();
         var csvs = new List<string>();
-        var files = Directory.GetFiles(o.InputFolder, "*.xlsx");
+        var files = Directory.GetFiles(o.InputFolder, "*.xlsx").ToList();
+        files.RemoveAll(v => v.Contains('~'));
         foreach (var file in files) {
             var inputFile = new FileInfo(file);
             if (!inputFile.Exists) throw new FileNotFoundException("File not exists");
