@@ -17,7 +17,7 @@ public partial class XlsxUtility
     {
         long startTime = Stopwatch.GetTimestamp();
         var csvs = new List<string>();
-        var files = Directory.GetFiles(o.InputFolder, "*.xlsx").ToList();
+        var files = Directory.GetFiles(o.InputFolder, "*.xlsx", SearchOption.AllDirectories).ToList();
         files.RemoveAll(v => v.Contains('~'));
         foreach (var file in files) {
             var inputFile = new FileInfo(file);
@@ -45,7 +45,7 @@ public partial class XlsxUtility
                     Console.WriteLine(outPath);
                 }
             }
-            Console.WriteLine("******************************");
+            Console.WriteLine("||||||||||||||||||||||||||||||||||||||||||||||||||");
         }
 
         var gb2312 = Encoding.GetEncoding("gb2312");
