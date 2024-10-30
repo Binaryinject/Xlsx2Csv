@@ -1,9 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Text;
-using System.Text.RegularExpressions;
 using CommandLine;
-using Sylvan.Data.Csv;
-using Sylvan.Data.Excel;
+using MiniExcelLibs;
 
 Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 Parser.Default.ParseArguments<Options>(args).WithParsed(XlsxUtility.Convert);
@@ -26,33 +24,22 @@ public partial class XlsxUtility
             if (!sourceArray.Contains(o.Delimiter))
                 o.Delimiter = ',';
 
-            var edr = ExcelDataReader.Create(file, new ExcelDataReaderOptions
-            {
-                GetErrorAsNull = true
-            });
+            var worksheetNames = MiniExcel.GetSheetNames(file);
 
             Console.WriteLine(file);
             Console.WriteLine("------------------------------");
-            foreach (var sheetName in edr.WorksheetNames) {
-                if (edr.TryOpenWorksheet(sheetName)) {
-                    var outPath = $"{o.OutputFolder}\\{sheetName}.csv";
-                    using CsvDataWriter cdw = CsvDataWriter.Create(outPath, new CsvDataWriterOptions
-                    {
-                        Delimiter = o.Delimiter
-                    });
-                    cdw.Write(edr);
-                    csvs.Add(outPath);
-                    Console.WriteLine(outPath);
-                }
+            
+            foreach (var sheetName in worksheetNames) {
+                var outPath = $"{o.OutputFolder}\\{sheetName}.csv";
+                using FileStream xlsx = File.Open(file, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                using FileStream csv = new FileStream(outPath, FileMode.OpenOrCreate);
+                csv.SaveAs(xlsx.Query(excelType: ExcelType.XLSX), false, sheetName, excelType: ExcelType.CSV);
+                csvs.Add(outPath);
+                Console.WriteLine(outPath);
             }
-            Console.WriteLine("||||||||||||||||||||||||||||||||||||||||||||||||||");
+            Console.WriteLine("\n\n");
         }
 
-        var gb2312 = Encoding.GetEncoding("gb2312");
-        foreach (var file in csvs) {
-            var b = Encoding.Convert(Encoding.UTF8, gb2312, Encoding.UTF8.GetBytes(File.ReadAllText(file)));
-            File.WriteAllText(file, gb2312.GetString(b), gb2312);
-        }
         TimeSpan elapsedTime = Stopwatch.GetElapsedTime(startTime);
         Console.WriteLine($"Converted file in {elapsedTime}");
     }
