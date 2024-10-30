@@ -39,8 +39,14 @@ public partial class XlsxUtility
             }
             Console.WriteLine("\n\n");
         }
+        
+        var gb2312 = Encoding.GetEncoding("gb2312");
+        foreach (var file in csvs) {
+            var b = Encoding.Convert(Encoding.UTF8, gb2312, Encoding.UTF8.GetBytes(File.ReadAllText(file)));
+            File.WriteAllText(file, gb2312.GetString(b), gb2312);
+        }
 
-        TimeSpan elapsedTime = Stopwatch.GetElapsedTime(startTime);
+        var elapsedTime = Stopwatch.GetElapsedTime(startTime);
         Console.WriteLine($"Converted file in {elapsedTime}");
     }
 }
