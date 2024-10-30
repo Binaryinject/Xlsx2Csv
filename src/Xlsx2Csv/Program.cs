@@ -32,12 +32,13 @@ public partial class XlsxUtility
             foreach (var sheetName in worksheetNames) {
                 var outPath = $"{o.OutputFolder}\\{sheetName}.csv";
                 using FileStream xlsx = File.Open(file, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-                using FileStream csv = new FileStream(outPath, FileMode.OpenOrCreate);
-                csv.SaveAs(xlsx.Query(excelType: ExcelType.XLSX), false, sheetName, excelType: ExcelType.CSV);
+                if (File.Exists(outPath)) File.Delete(outPath);
+                using FileStream csv = new FileStream(outPath, FileMode.CreateNew);
+                csv.SaveAs(xlsx.Query(false, sheetName, excelType: ExcelType.XLSX), false, sheetName, excelType: ExcelType.CSV);
                 csvs.Add(outPath);
                 Console.WriteLine(outPath);
             }
-            Console.WriteLine("\n\n");
+            Console.WriteLine("\n");
         }
         
         var gb2312 = Encoding.GetEncoding("gb2312");
